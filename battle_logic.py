@@ -44,5 +44,5 @@ def compare_phase(stat, attacker_guess, defender_guess, defending_player, attack
 
 def is_battle_ongoing(player_1, player_2):
     """Check if the battle is still ongoing based on life points and available stats."""
-    return player_1["LP"] > 0 and player_2["LP"] > 0 and len(player_1["stats"]) > 0 and len(player_2["stats"]) > 0
+    return player_1["LP"] > 0 and player_2["LP"] > 0 and len(player_1["guesses"]) > 0 and len(player_2["guesses"]) > 0
 

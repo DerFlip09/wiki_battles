@@ -1,6 +1,3 @@
-
-
-
 def print_welcome_message():
     print(39*"#" + "\n" + 5*"#"+ " Welcome to the Wiki Battles " + 5*"#" + "\n" + 39*"#")
 

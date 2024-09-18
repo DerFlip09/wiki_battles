@@ -1,5 +1,5 @@
 from printings import *
-from player import *
+from player import initialize_player
 from battle_logic import *
 
 
@@ -10,7 +10,7 @@ def main():
     print_instructions(player_1, player_2)
     battle_round = 1
     while is_battle_ongoing(player_1, player_2):
-        print(f"Round {battle_round} start!")
+        print(f"\nRound {battle_round} start!")
         conduct_battle_round(player_1, player_2)
         if is_battle_ongoing(player_1, player_2):
             conduct_battle_round(player_2, player_1)

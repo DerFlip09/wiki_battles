@@ -1,7 +1,13 @@
-from article import *
+from article import prep_article_data
 
 
 LP = 5
+COMMAND_DISPATCHER = {1: "Count of words",
+                      2: "Count of images",
+                      3: "Count of hyperlinks",
+                      4: "Length of longest word",
+                      5: "Highest number on page",
+                      6: "Lowest number on page"}
 
 
 def initialize_player(player_n):
