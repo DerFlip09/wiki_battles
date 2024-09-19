@@ -1,5 +1,5 @@
 def print_welcome_message():
-    print(39*"#" + "\n" + 5*"#"+ " Welcome to the Wiki Battles " + 5*"#" + "\n" + 39*"#")
+    print(f"\n{39*"#"}\n{5*"#"} Welcome to the Wiki Battles {5*"#"}\n{39*"#"}\n")
 
 
 def print_instructions(player_1, player_2):

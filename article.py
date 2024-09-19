@@ -75,8 +75,7 @@ def lowest_number_on_page(content):
     return min(number_list)
 
 
-def get_article_stats(title):
-    article_content = get_content_from_title(title)
+def get_article_stats(title, article_content):
     stats = {"Count of words": count_of_words(article_content),
              "Count of images": count_of_images(title),
              "Count of hyperlinks": count_of_hyperlinks(title),
@@ -87,8 +86,13 @@ def get_article_stats(title):
 
 
 def prep_article_data():
-    title = get_random_article_title()
-    stats = get_article_stats(title)
-    return title, stats
+    while True:
+        try:
+            title = get_random_article_title()
+            content = get_content_from_title(title)
+        except wikipedia.exceptions.DisambiguationError:
+            continue
+        stats = get_article_stats(title, content)
+        return title, stats
 
 
